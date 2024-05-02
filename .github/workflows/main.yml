@@ -1,18 +1,16 @@
 on: push
-name: Deploy website on push
+name: 🚀 Deploy website on push
 jobs:
   web-deploy:
-    name: Deploy
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.3.5
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp://ftp.webdevlearning.org/cosw30/
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        protocol: ftps
-        server-dir: public_html/test-push-ftp/
+        server: ftp.webdevlearning.org
+        username: myFtpUserName
+        password: ${{ secrets.ftp_password }}
