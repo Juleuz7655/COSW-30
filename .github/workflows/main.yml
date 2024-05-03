@@ -11,6 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        ftp-server: ftp://darthvader%40webdevlearning.org@ftp.webdevlearning.org/
+        server: ftp.webdevlearning.org
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /cosw30/  # Adjust this to your target directory on the FTP server
