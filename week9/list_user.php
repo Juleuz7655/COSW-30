@@ -33,5 +33,8 @@ echo "<tr><td class='center'>" . $row['user_id'] . "</td><td>" . $row['email_add
 echo "</table>"; // close table
 
 ?>
+
+<h1>Hello World <h1>
+
 </body>
 </html>
