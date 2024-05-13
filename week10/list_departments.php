@@ -20,7 +20,7 @@
         
         echo "<h1> List of Departments";
 
-        $query = "SELECT * FROM DEPARTMENT ORDER BY department_name";
+        $query = "SELECT * FROM DEPARTMENTS ORDER BY department_name";
         $result = mysqli_query($connection, $query);
 
         echo "<table><thead><td class ='center'> Department ID<td><td>Department Name</td><td>Number of Employees</td><td>Building Number</td><td>Status</td></thead>";
