@@ -6,6 +6,23 @@
 if ($SERVER["REQUEST_METHOD"] == "POST") {
 
     print_r($_POST);
+
+    $department_id = $_POST['department_id'];
+    $department_name = $_POST['department_name'];
+    $num_of_employees = $_POST['num_of_employees'];
+    $building_number = $_POST['building_number'];
+    $status = $_POST['status'];
+
+    $update_query = 
+        "UPDATE DEPARTMENT
+        SET department_name = '$department_name',
+        num_of_employees = '$num_of_employees',
+        building_number = '$building_numbear',
+        status = '$status'
+        WHERE department_id = $department_id";
+
+    echo $update_query
+
     exit("Testing");
 
 }
