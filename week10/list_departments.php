@@ -26,10 +26,13 @@
         echo "<table><thead><td class ='center'> Department ID<td><td>Department Name</td><td>Number of Employees</td><td>Building Number</td><td>Status</td></thead>";
 
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "<tr><td class= 'center'>" . $row['department_id']. "</td><td>" . $row['department_name'] . "</td><td>" . $row['num_of_employees']
-            . "</td><td>" . $row['building_number'] . "</td><td>" . $row['status'] . "</td></tr>";
+            echo "<tr><td class='center'>" . $row['department_id'] . "</td>" .
+                 "<td>" . $row['department_name'] . "</td>" .
+                 "<td>" . $row['num_of_employees'] . "</td>" .
+                 "<td>" . $row['building_number'] . "</td>" .
+                 "<td>" . $row['status'] . "</td></tr>";
         }
-        echo "/table";
+        echo "</table>"; // close table
         ?>
         <p> <a href="../week9/list_user.php">List Users</a></p>
 

@@ -28,11 +28,7 @@ $result = mysqli_query($connection, $query);
 echo "<table><thead><td class='center'>ID</td><td>Email Address</td></thead>"; // open table and include table headings
 
 while ($row = mysqli_fetch_assoc($result)) {
-    echo "<tr><td class='center'>" . $row['department_id'] . "</td>" .
-         "<td>" . $row['department_name'] . "</td>" .
-         "<td>" . $row['num_of_employees'] . "</td>" .
-         "<td>" . $row['building_number'] . "</td>" .
-         "<td>" . $row['status'] . "</td></tr>";
+    echo "<tr><td class='center'>" . $row['user_id'] . "</td><td>" . $row['email_address'] . "</td></tr>";
 }
 echo "</table>"; // close table
 
