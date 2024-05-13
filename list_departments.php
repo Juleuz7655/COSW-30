@@ -16,7 +16,7 @@
     </head>
     <body>
         <?php
-        require('.../week9/mysqli_connect.php');
+        require('.../mysqli_connect.php');
         
         echo "<h1> List of Departments";
 
