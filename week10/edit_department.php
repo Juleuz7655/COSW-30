@@ -1,4 +1,4 @@
-<?php require("mysqli_connection.php"); ?>
+<?php require("mysqli_connect.php"); ?>
 
 
 <?php 
