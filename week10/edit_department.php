@@ -32,14 +32,14 @@ if ($SERVER["REQUEST_METHOD"] == "POST") {
         echo "Failed";
     }
 
-else {
-    $department_id = $_GET['id'];
-    $query = "SELECT * FROM DEPARTMENTS WHERE department_id = $department_id";
-
-    // USER TESTING
-    echo $department_id;
-    echo $query;
-}
+//else {
+//    $department_id = $_GET['id'];
+//    $query = "SELECT * FROM DEPARTMENTS WHERE department_id = $department_id";
+//
+//    // USER TESTING
+//    echo $department_id;
+//    echo $query;
+//}
 // $result = mysqli_query($connection, $query);
 // $row = mysqli_fetch_array($result);
 ?>
