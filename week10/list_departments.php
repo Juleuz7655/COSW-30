@@ -27,7 +27,7 @@
 
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr><td class= 'center'>" . $row['department_id']. "</td><td>" . $row['department_name'] . "</td><td>" . $row['num_of_employees']
-            . "</td><td>" . $row['building _number'] . "</td><td>" . $row['status'] . "</td></tr>";
+            . "</td><td>" . $row['building_number'] . "</td><td>" . $row['status'] . "</td></tr>";
         }
         echo "/table";
         ?>
