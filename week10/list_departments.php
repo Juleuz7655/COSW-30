@@ -25,12 +25,12 @@
             echo "<h4>Your record has been updated.</h4>";
         }
 
-        
+
         $query = "SELECT * FROM DEPARTMENTS ORDER BY department_name";
         $result = mysqli_query($connection, $query);
 
         echo "<table><thead><td class ='center'> Department ID<td><td>Department Name</td><td>Number of Employees</td><td>Building Number</td><td>Status</td>
-        <
+        
         </thead>";
 
         while ($row = mysqli_fetch_assoc($result)) {
