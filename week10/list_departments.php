@@ -20,6 +20,12 @@
         
         echo "<h1> List of Departments<h1>";
 
+        if(isset($_GET['msg'])) {
+            //if msg exsists, then create feedback
+            echo "<h4>Your record has been updated.</h4>";
+        }
+
+        
         $query = "SELECT * FROM DEPARTMENTS ORDER BY department_name";
         $result = mysqli_query($connection, $query);
 
