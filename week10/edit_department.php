@@ -5,7 +5,7 @@
 // If this form has been submitted do the update process
 if ($SERVER["REQUEST_METHOD"] == "POST") {
 
-    print_r($_POST);
+    //print_r($_POST);
 
     $department_id = $_POST['department_id'];
     $department_name = $_POST['department_name'];
@@ -25,23 +25,31 @@ if ($SERVER["REQUEST_METHOD"] == "POST") {
 
     $update_result = mysqli_query($connection, $update_query);
     if ($update_result){
-        echo '<h4>Success! The department has been successfully updated!</h4>
-            <p><a href="list_department.php">Return to List</a></p>';
-        exit;
-        } else {
-        echo "Failed";
+        redirect_to("list_departments.php?msg=ok");
+        echo "Record sucessfully updated.";
     }
+    else {
+        echo "Update failed.";
+    }
+
+    exit("Testing");
 }
-//else {
-//    $department_id = $_GET['id'];
-//    $query = "SELECT * FROM DEPARTMENTS WHERE department_id = $department_id";
-//
-//    // USER TESTING
-//    echo $department_id;
-//    echo $query;
-//}
-// $result = mysqli_query($connection, $query);
-// $row = mysqli_fetch_array($result);
+//        echo '<h4>Success! The department has been successfully updated!</h4>
+//          <p><a href="list_department.php">Return to List</a></p>';
+//      exit;
+//      } else {
+//      echo "Failed";
+//    }
+    else {
+    $department_id = $_GET['id'];
+    $query = "SELECT * FROM DEPARTMENTS WHERE department_id = $department_id";
+
+    // USER TESTING
+    echo $department_id;
+    echo $query;
+}
+ $result = mysqli_query($connection, $query);
+ $row = mysqli_fetch_array($result);
 ?>
 
 <h1>Update Department</h1>
