@@ -18,7 +18,7 @@
         <?php
         require('mysqli_connect.php');
         
-        echo "<h1> List of Departments";
+        echo "<h1> List of Departments<h1>";
 
         $query = "SELECT * FROM DEPARTMENTS ORDER BY department_name";
         $result = mysqli_query($connection, $query);
