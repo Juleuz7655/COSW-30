@@ -23,18 +23,14 @@ if ($SERVER["REQUEST_METHOD"] == "POST") {
 
     //echo $update_query
 
-    $update_result - mysqli_query($connection, $update_query);
-    if ($update_result) {
-        //Sucess
-        echo "Record sucessfully updated.";
+    $update_result = mysqli_query($connection, $update_query);
+    if ($update_result){
+        echo '<h4>Success! The department has been successfully updated!</h4>
+            <p><a href="list_departments.php">Return to List</a></p>';
+        exit;
+        } else {
+        echo "Failed";
     }
-    else {
-        echo "Update failed.";
-    }
-
-    exit("Testing");
-
-}
 
 else {
     $department_id = $_GET['id'];
