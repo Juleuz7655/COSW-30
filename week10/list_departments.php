@@ -31,7 +31,7 @@
         }
         echo "/table";
         ?>
-        <p> <a href=".../week9/list_user.php">List Users</a></p>
+        <p> <a href="../week9/list_user.php">List Users</a></p>
 
     </body>
 </html>
