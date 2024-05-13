@@ -31,7 +31,7 @@ if ($SERVER["REQUEST_METHOD"] == "POST") {
         } else {
         echo "Failed";
     }
-
+}
 //else {
 //    $department_id = $_GET['id'];
 //    $query = "SELECT * FROM DEPARTMENTS WHERE department_id = $department_id";
