@@ -41,7 +41,7 @@ else {
 
 <h1>Update Department</h1>
 <form action="edit_department.php" method="post">
-    <p>Department ID: <input type="text" readonly value="<?php echo $row['department_id']; ?>"></p>
+    <p>Department ID: <input type="text" name="department_id" readonly value="<?php echo $row['department_id']; ?>"></p>
     <p>Department Name: <input type="text" name="department_name" value="<?php echo $row['department_name']; ?>" required></p>
     <p>Number of Employees: <input type="text" name="num_of_employees" value="<?php echo $row['num_of_employees']; ?>" required></p>
     <p>Building Number: <input type="text" name="building_number" value="<?php echo $row['building_number']; ?>" required></p>
