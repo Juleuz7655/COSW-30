@@ -4,7 +4,7 @@
 // If this form has been submitted do the update process
 if ($SERVER["REQUEST_METHOD"] == "POST") {
 
-    //print_r($_POST);
+    print_r($_POST);
 
     $department_id = $_POST['department_id'];
     $department_name = $_POST['department_name'];
