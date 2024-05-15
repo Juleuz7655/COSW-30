@@ -1,6 +1,5 @@
 <?php require("mysqli_connect.php"); ?>
 
-
 <?php 
 // If this form has been submitted do the update process
 if ($SERVER["REQUEST_METHOD"] == "POST") {
