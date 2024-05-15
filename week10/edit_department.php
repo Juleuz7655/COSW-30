@@ -13,7 +13,7 @@ if ($SERVER["REQUEST_METHOD"] == "POST") {
     $status = $_POST['status'];
 
     $update_query = 
-        "UPDATE DEPARTMENT
+        "UPDATE DEPARTMENTS
         SET department_name = '$department_name',
         num_of_employees = '$num_of_employees',
         building_number = '$building_numbear',
