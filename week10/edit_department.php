@@ -20,7 +20,7 @@ if ($SERVER["REQUEST_METHOD"] == "POST") {
         status = '$status'
         WHERE department_id = $department_id";
 
-    //echo $update_query
+    echo $update_query
 
     $update_result = mysqli_query($connection, $update_query);
     if ($update_result){
