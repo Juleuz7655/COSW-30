@@ -2,7 +2,7 @@
 
 <?php 
 // If this form has been submitted do the update process
-if ($SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     print_r($_POST);
 
@@ -16,7 +16,7 @@ if ($SERVER["REQUEST_METHOD"] == "POST") {
         "UPDATE DEPARTMENTS
         SET department_name = '$department_name',
         num_of_employees = '$num_of_employees',
-        building_number = '$building_numbear',
+        building_number = '$building_number',
         status = '$status'
         WHERE department_id = $department_id";
 
