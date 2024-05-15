@@ -24,8 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $update_result = mysqli_query($connection, $update_query);
     if ($update_result){
-        redirect_to("list_departments.php?msg=ok");
-        header("Location: list_departments.php?msg=ok");
+        echo '<h4>Success! The department has been successfully updated!</h4>
+          <p><a href="list_department.php">Return to List</a></p>';
+//        redirect_to("list_departments.php?msg=ok");
+//        header("Location: list_departments.php?msg=ok");
         exit;
     }
     else {
