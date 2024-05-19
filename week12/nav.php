@@ -1,0 +1,1 @@
+<a href="list_posts.php">Posts</a> | <a href="list_users.php">Users</a>
