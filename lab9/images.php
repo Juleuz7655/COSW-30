@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Images</title>
-	<script charset="utf-8" src="js/function.js"></script>
+	<script charset="utf-8" src="function.js"></script>
 </head>
 <body>
 <p>Click on an image to view it in a separate window.</p>
@@ -15,7 +15,7 @@
 // Set the default timezone:
 date_default_timezone_set('America/New_York');
 
-$dir = '../uploads'; // Define the directory to view.
+$dir = 'uploads'; // Define the directory to view.
 
 $files = scandir($dir); // Read all the images into an array.
 
