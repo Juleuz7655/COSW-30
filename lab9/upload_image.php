@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if (in_array($_FILES['upload']['type'], $allowed)) {
 
 			// Move the file over.
-			if (move_uploaded_file ($_FILES['upload']['tmp_name'], "../uploads/{$_FILES['upload']['name']}")) {
+			if (move_uploaded_file ($_FILES['upload']['tmp_name'], "uploads/{$_FILES['upload']['name']}")) {
 				echo '<p><em>The file has been uploaded!</em></p>';
 			} // End of move... IF.
 
