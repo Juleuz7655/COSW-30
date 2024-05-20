@@ -36,3 +36,4 @@ echo "</table>"; // close table
 
 ?>
 </body>
+</html>
