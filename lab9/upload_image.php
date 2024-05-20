@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 			// Move the file over.
 			if (move_uploaded_file ($_FILES['upload']['tmp_name'], "uploads/{$_FILES['upload']['name']}")) {
-				echo '<p><em>The file has been <a href="images.php>uploaded!</a></em></p>';
+				echo '<p><em>The file has been <a href="images.php">uploaded!</a></em></p>';
 			} // End of move... IF.
 
 		} else { // Invalid type.
