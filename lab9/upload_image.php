@@ -80,9 +80,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <form enctype="multipart/form-data" action="upload_image.php" method="post">
 
-	<input type="hidden" name="MAX_FILE_SIZE" value="524288">
+	<input type="hidden" name="MAX_FILE_SIZE" value="750000">
 
-	<fieldset><legend>Select a JPEG or PNG image of 512KB or smaller to be uploaded:</legend>
+	<fieldset><legend>Select a JPEG or PNG image of 750KB or smaller to be uploaded:</legend>
 
 	<p><strong>File:</strong> <input type="file" name="upload"></p>
 
