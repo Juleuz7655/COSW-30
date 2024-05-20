@@ -7,6 +7,7 @@
 </head>
 <body>
 <p>Click on an image to view it in a separate window.</p>
+<p> Here is also the link to go to file uploads: <a href="upload_image.php">upload_image.php</a></p>
 <ul>
 <?php # Script 11.6 - images.php
 // This script lists the images in the uploads directory.
