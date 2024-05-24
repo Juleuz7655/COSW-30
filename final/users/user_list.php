@@ -25,8 +25,8 @@ require('../mysqli_connect.php'); // use require because we want to force this t
 
 echo "<h1>List of Website Users</h1>";
 //And now to perform a simple query to make sure it's working
-$query_active = "SELECT * FROM FINAL PERSON WHERE TEAM = 'neutral'";
-$result_active = mysqli_query($connection, $query_active);
+$query_neutral = "SELECT * FROM FINAL PERSON WHERE TEAM = 'neutral'";
+$result_neutral = mysqli_query($connection, $query_neutral);
 
 echo "<h2>Neutral Users</h2>";
 echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Status</td><td>Action</td><td>Team</td></thead>"; // open table and include table headings
@@ -37,15 +37,13 @@ echo "<tr><td class='center'>" . $row_neutral['user_id'] . "</td><td>" . $row_ne
 echo "</table>"; // close table
 
 
-//Table for Inactive Users
-//And now to perform a simple query to make sure it's working
-$query_inactive = "SELECT * FROM FINAL PERSON WHERE TEAM = 'light'";
-$result_inactive = mysqli_query($connection, $query_inactive);
+$query_light = "SELECT * FROM FINAL PERSON WHERE TEAM = 'light'";
+$result_light = mysqli_query($connection, $query_light);
 
 echo "<h2>Light Users</h2>";
 echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Status</td><td>Action</td><td>Team</td></thead>"; // open table and include table headings
 
-while ($row_light = mysqli_fetch_assoc($result_inactive)) {
+while ($row_light = mysqli_fetch_assoc($result_light)) {
 echo "<tr><td class='center'>" . $row_light['user_id'] . "</td><td>" . $row_light['first_name'] . "</td><td>" . $row_light['last_name'] . "</td><td>" . $row_light['email_address'] . "</td><td>" . $row_light['role'] . "</td><td>" . $row_light['status'] . "</td><td>" . $row_neutral['team'] . "</td><td><a href='user.php?id=" . $row_light['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_light['user_id'] . "'>Edit</a></td></tr>";
 }
 echo "</table>"; // close table
