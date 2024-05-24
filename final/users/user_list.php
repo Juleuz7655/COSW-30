@@ -25,19 +25,19 @@ require('../mysqli_connect.php'); // use require because we want to force this t
 
 echo "<h1>List of Website Users</h1>";
 //And now to perform a simple query to make sure it's working
-$query_neutral = "SELECT * FROM FINAL PERSON WHERE TEAM = 'neutral'";
+$query_neutral = "SELECT * FROM FINAL_PERSON WHERE TEAM = 'neutral'";
 $result_neutral = mysqli_query($connection, $query_neutral);
 
 echo "<h2>Neutral Users</h2>";
 echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Status</td><td>Action</td><td>Team</td></thead>"; // open table and include table headings
 
-while ($row_neutral = mysqli_fetch_assoc($result_active)) {
+while ($row_neutral = mysqli_fetch_assoc($result_neutral)) {
 echo "<tr><td class='center'>" . $row_neutral['user_id'] . "</td><td>" . $row_neutral['first_name'] . "</td><td>" . $row_neutral['last_name'] . "</td><td>" . $row_neutral['email_address'] . "</td><td>" . $row_neutral['role'] . "</td><td>" . "</td><td>" . $row_neutral['status'] . $row_neutral['team'] . "</td><td><a href='user.php?id=" . $row_neutral['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_neutral['user_id'] . "'>Edit</a></td></tr>";
 }
 echo "</table>"; // close table
 
 
-$query_light = "SELECT * FROM FINAL PERSON WHERE TEAM = 'light'";
+$query_light = "SELECT * FROM FINAL_PERSON WHERE TEAM = 'light'";
 $result_light = mysqli_query($connection, $query_light);
 
 echo "<h2>Light Users</h2>";
@@ -48,7 +48,7 @@ echo "<tr><td class='center'>" . $row_light['user_id'] . "</td><td>" . $row_ligh
 }
 echo "</table>"; // close table
 
-$query_dark = "SELECT * FROM FINAL PERSON WHERE TEAM = 'dark'";
+$query_dark = "SELECT * FROM FINAL_PERSON WHERE TEAM = 'dark'";
 $result_dark = mysqli_query($connection, $query_dark);
 
 echo "<h2>Dark Users</h2>";
