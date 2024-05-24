@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         $email_address = $_POST['email_address'];
         $password = $_POST['password'];
         $role = $_POST['role'];
-        $user_photo = $_POST['user_photo'];
+        $photo = $_POST['photo'];
         $status = $_POST['status'];
 
         $update_query = 
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             email_address = '$email_address',
             password = '$password',
             role = '$role',
-            user_photo = '$user_photo',
+            photo = '$photo',
             status = '$status' 
             WHERE user_id = $user_id";
 
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         <p>Last Name: <input type="text" name="last_name" value="<?php echo $row['last_name']; ?>" required></p>
         <p>Email Address: <input type="text" name="email_address" value="<?php echo $row['email_address']; ?>" required></p>
         <p>Password: <input type="text" name="password" value="<?php echo $row['password']; ?>" required></p>
-        <p>Profile Picture: <input type="text" name="user_photo" value="<?php echo $row['user_photo']; ?>"></p>
+        <p>Profile Picture: <input type="text" name="photo" value="<?php echo $row['photo']; ?>"></p>
         <p>Role:
             <select id="role" name="role" required>
             <option value="<?php echo $row['role']; ?>" default><?php echo $row['role']; ?></option>
