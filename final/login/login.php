@@ -1,16 +1,16 @@
 <?php
-require('mysqli_connect.php'); // Include the database connection file
+require('../mysqli_connect.php');
 
-// Check connection
+
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 
-// Prepare and bind
+
 $stmt = $connection->prepare("INSERT INTO FINAL_PERSON (first_name, last_name, email_address, role, photo, status) VALUES (?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssssss", $first_name, $last_name, $email_address, $role, $photo, $status);
 
-// Set parameters and execute
+
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $email_address = $_POST['email_address'];
