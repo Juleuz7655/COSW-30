@@ -9,7 +9,7 @@
             <nav>
                 <ul>
                     <li><a href="planets.php">Planets</a></li>
-                    <li><a href="login.html">Login/Sign Up</a></li>
+                    <li><a href="login/login.html">Login/Sign Up</a></li>
                     <li><a href="users/user_list.php">Users</a></li>
                     <?php if ($role === 'Admin'): ?>
                         <li><a href="list_planets.php">Planet list</a></li>
