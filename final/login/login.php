@@ -8,7 +8,7 @@ if ($connection->connect_error) {
 
 
 $stmt = $connection->prepare("INSERT INTO FINAL_PERSON (first_name, last_name, email_address, role, photo, status, team) VALUES (?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("sssssss", $first_name, $last_name, $email_address, $role, $photo, $status);
+$stmt->bind_param("sssssss", $first_name, $last_name, $email_address, $role, $photo, $status, $team);
 
 
 $first_name = $_POST['first_name'];
