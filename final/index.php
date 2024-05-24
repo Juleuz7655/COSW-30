@@ -10,7 +10,7 @@
                 <ul>
                     <li><a href="planets.php">Planets</a></li>
                     <li><a href="login.html">Login/Sign Up</a></li>
-                    <li><a href="users.php">Users</a></li>
+                    <li><a href="users/user_list.php">Users</a></li>
                     <?php if ($role === 'Admin'): ?>
                         <li><a href="list_planets.php">Planet list</a></li>
                         <li><a href="list_user.php">User list</a></li>
