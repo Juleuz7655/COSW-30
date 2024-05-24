@@ -7,8 +7,8 @@ if ($connection->connect_error) {
 }
 
 
-$stmt = $connection->prepare("INSERT INTO FINAL_PERSON (first_name, last_name, email_address, role, photo, status) VALUES (?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssss", $first_name, $last_name, $email_address, $role, $photo, $status);
+$stmt = $connection->prepare("INSERT INTO FINAL_PERSON (first_name, last_name, email_address, role, photo, status, team) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("sssssss", $first_name, $last_name, $email_address, $role, $photo, $status);
 
 
 $first_name = $_POST['first_name'];
@@ -17,6 +17,7 @@ $email_address = $_POST['email_address'];
 $role = $_POST['role'];
 $photo = $_POST['photo'];
 $status = $_POST['status'];
+$team = $_POST['team'];
 
 if ($stmt->execute()) {
     echo "New record created successfully";
