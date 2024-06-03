@@ -1,33 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php echo $page_title; ?></title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="css/sticky-footer-navbar.css" rel="stylesheet">
-</head>
-<body>
-<nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container">
-		<div class="navbar-header"><a class="navbar-brand" href="#">Your Website</a></div>
-		<div id="navbar" class="collapse navbar-collapse">
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="index.php">Home</a></li>
-			<li><a href="register.php">Register</a></li>
-			<li><a href="view_users.php">View Users</a></li>
-			<li><a href="password.php">Change Password</a></li>
-			<li><?php // Create a login/logout link:
-if (isset($_SESSION['user_id'])) {
-	echo '<a href="logout.php">Logout</a>';
-} else {
-	echo '<a href="login.php">Login</a>';
-}
-?></li>
-		</ul>
-		</div>
-	</div>
-</nav>
-<div class="container">
-<!-- Script 12.10 - header.html -->
+<?php # Script 12.12 - login.php #4
+// This page processes the login form submission.
+// The script now stores the HTTP_USER_AGENT value for added security.
+
+// Check if the form has been submitted:
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+	// Need two helper files:
+	require('includes/login_functions.inc.php');
+	require('../mysqli_connect.php');
+
+	// Check the login:
+	list ($check, $data) = check_login($dbc, $_POST['email'], $_POST['pass']);
+
+	if ($check) { // OK!
+
+		// Set the session data:
+		session_start();
+		$_SESSION['user_id'] = $data['user_id'];
+		$_SESSION['first_name'] = $data['first_name'];
+
+		// Store the HTTP_USER_AGENT:
+		$_SESSION['agent'] = sha1($_SERVER['HTTP_USER_AGENT']);
+
+		// Redirect:
+		redirect_user('loggedin.php');
+
+	} else { // Unsuccessful!
+
+		// Assign $data to $errors for login_page.inc.php:
+		$errors = $data;
+
+	}
+
+	mysqli_close($dbc); // Close the database connection.
+
+} // End of the main submit conditional.
+
+// Create the page:
+include('includes/login_page.inc.php');
+?>
