@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	require('../mysqli_connect.php');
 
 	// Check the login:
-	list ($check, $data) = check_login($dbc, $_POST['email'], $_POST['pass']);
+	list ($check, $data) = check_login($connection, $_POST['email'], $_POST['pass']);
 
 	if ($check) { // OK!
 
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	}
 
-	mysqli_close($dbc); // Close the database connection.
+	mysqli_close($connection); // Close the database connection.
 
 } // End of the main submit conditional.
 

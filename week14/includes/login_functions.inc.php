@@ -31,7 +31,7 @@ function redirect_user($page = 'index.php') {
  * - a TRUE/FALSE variable indicating success
  * - an array of either errors or the database result
  */
-function check_login($dbc, $email = '', $pass = '') {
+function check_login($connection, $email = '', $pass = '') {
 
 	$errors = []; // Initialize error array.
 
@@ -39,14 +39,14 @@ function check_login($dbc, $email = '', $pass = '') {
 	if (empty($email)) {
 		$errors[] = 'You forgot to enter your email address.';
 	} else {
-		$e = mysqli_real_escape_string($dbc, trim($email));
+		$e = mysqli_real_escape_string($connection, trim($email));
 	}
 
 	// Validate the password:
 	if (empty($pass)) {
 		$errors[] = 'You forgot to enter your password.';
 	} else {
-		$p = mysqli_real_escape_string($dbc, trim($pass));
+		$p = mysqli_real_escape_string($connection, trim($pass));
 	}
 
 	if (empty($errors)) { // If everything's OK.
@@ -54,7 +54,7 @@ function check_login($dbc, $email = '', $pass = '') {
 		// Retrieve the user_id and first_name for that email/password combination:
 		//$q = "SELECT user_id, first_name FROM users WHERE email='$e' AND pass=SHA2('$p', 512)";
         $q = "SELECT user_id, first_name FROM users WHERE email_address='$e' AND pass=SHA2('$p'";
-		$r = @mysqli_query($dbc, $q); // Run the query.
+		$r = @mysqli_query($connection, $q); // Run the query.
 
 		// Check the result:
 		if (mysqli_num_rows($r) == 1) {
