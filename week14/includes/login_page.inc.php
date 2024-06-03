@@ -19,8 +19,8 @@ if (isset($errors) && !empty($errors)) {
 // Display the form:
 ?><h1>Login</h1>
 <form action="login.php" method="post">
-	<p>Email Address: <input type="email" name="email" size="20" maxlength="60"> </p>
-	<p>Password: <input type="password" name="pass" size="20" maxlength="20"></p>
+	<p>Email Address: <input type="email_address" name="email_address" size="20" maxlength="60"> </p>
+	<p>Password: <input type="password" name="password" size="20" maxlength="20"></p>
 	<p><input type="submit" name="submit" value="Login"></p>
 </form>
 

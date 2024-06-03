@@ -31,22 +31,22 @@ function redirect_user($page = 'index.php') {
  * - a TRUE/FALSE variable indicating success
  * - an array of either errors or the database result
  */
-function check_login($connection, $email = '', $pass = '') {
+function check_login($connection, $email_address = '', $password = '') {
 
 	$errors = []; // Initialize error array.
 
 	// Validate the email address:
-	if (empty($email)) {
+	if (empty($email_address)) {
 		$errors[] = 'You forgot to enter your email address.';
 	} else {
-		$e = mysqli_real_escape_string($connection, trim($email));
+		$e = mysqli_real_escape_string($connection, trim($email_address));
 	}
 
 	// Validate the password:
-	if (empty($pass)) {
+	if (empty($password)) {
 		$errors[] = 'You forgot to enter your password.';
 	} else {
-		$p = mysqli_real_escape_string($connection, trim($pass));
+		$p = mysqli_real_escape_string($connection, trim($password));
 	}
 
 	if (empty($errors)) { // If everything's OK.
