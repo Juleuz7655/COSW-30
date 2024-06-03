@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	require('mysqli_connect.php');
 
 	// Check the login:
-	list ($check, $data) = check_login($connection, $_POST['email'], $_POST['pass']);
+	list ($check, $data) = check_login($connection, $_POST['email_address'], $_POST['password']);
 
 	if ($check) { // OK!
 
