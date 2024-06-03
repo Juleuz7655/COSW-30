@@ -1,6 +1,6 @@
 <?php
 require('../mysqli_connect.php');
-
+require('upload_image.php')
 
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
