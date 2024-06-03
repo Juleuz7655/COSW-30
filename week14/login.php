@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	// Need two helper files:
 	require('includes/login_functions.inc.php');
-	require('../mysqli_connect.php');
+	require('mysqli_connect.php');
 
 	// Check the login:
 	list ($check, $data) = check_login($connection, $_POST['email_address'], $_POST['password']);
