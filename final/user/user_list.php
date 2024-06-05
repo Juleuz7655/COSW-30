@@ -7,7 +7,7 @@
 </head>
 <body>
 <!--    <header>
-        <?php// include 'nav.php'; ?>
+        <?php('../includes/navigation.html') ?>
     </header>
 -->
 <?php 
