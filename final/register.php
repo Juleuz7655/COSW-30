@@ -1,9 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Include the database connection file
     include 'mysqli_connect.php';
 
-    // Retrieve form data
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email_address = $_POST['email_address'];
@@ -12,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['password']; 
     $photo = '';
 
-    // Handle file upload
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
         $target_dir = "uploads/";
         $target_file = $target_dir . basename($_FILES["photo"]["name"]);
@@ -74,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2>User Registration</h2>
-    <form action="register.php" method="post">
+    <form action="register.php" method="post" enctype="multipart/form-data">
         <label for="first_name">First Name:</label><br>
         <input type="text" id="first_name" name="first_name" required><br><br>
         <label for="last_name">Last Name:</label><br>
