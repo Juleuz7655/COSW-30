@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,19 +26,8 @@
                     <li><a href="list_planets.php">Planet list</a></li>
                     <li><a href="list_user.php">User list</a></li>
                 <?php endif; ?>
-                <li>
-                    <a href="#">Developer options ▽</a>
-                    <ul class="dropdown">
-                        <p>Current Role: <?php echo $role; ?></p>
-                        <form method="post" action="">
-                            <input type="hidden" name="toggle_role" value="toggle">
-                            <button type="submit">
-                                <?php echo ($role === 'Admin') ? 'Change Role to User' : 'Change Role to Admin'; ?>
-                            </button>
-                        <li><a href="list_planets.php">List of Planets</a></li>
-                        <li><a href="users/user_list.php">List of Users</a></li>
-                    </ul>
-                </li>
+                <li><a href="list_planets.php">List of Planets</a></li>
+                <li><a href="users/user_list.php">List of Users</a></li>
             </ul>
         </nav>
-    </header>
+    </header>>
