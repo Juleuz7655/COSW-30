@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $update_result = mysqli_query($connection, $update_query);
     if ($update_result){
-        echo '<h4>Success! The planet has been successfully updated!</h4> <p><a href="list_planets.php">Return to List</a></p>';
+        echo '<h4>Success! The planet has been successfully updated!</h4> <p><a href="planet_list.php">Return to List</a></p>';
         exit;
     }
     else {
