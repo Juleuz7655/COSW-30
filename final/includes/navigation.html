@@ -5,7 +5,7 @@ session_start();
 $isAdmin= isset($_SESSION['role']) && $_SESSION['role'] === 'Admin';
 
 ?> 
-
+<header>
 
 <nav>
     <ul>
@@ -30,3 +30,5 @@ $isAdmin= isset($_SESSION['role']) && $_SESSION['role'] === 'Admin';
         <!-- Not yet done-->
     </ul>
 </nav>
+
+</header>
