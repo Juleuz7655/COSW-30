@@ -33,3 +33,5 @@
         <div class="flex-item">Item 9</div>
     </div>
 </div>
+
+<?php include('../../includes/footer.html')?>
