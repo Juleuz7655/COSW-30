@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Choose a side</h1>
-<?php include('../../includes/navigation.html');?>
+<?php include('../includes/navigation.html');?>
 
 
 <div class="container">
@@ -34,4 +34,4 @@
     </div>
 </div>
 
-<?php include('../../includes/footer.html');?>
+<?php include('../includes/footer.html');?>
