@@ -55,7 +55,7 @@ echo "<h2>Dark Users</h2>";
 echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Status</td><td>Action</td><td>Team</td></thead>"; // open table and include table headings
 
 while ($row_dark = mysqli_fetch_assoc($result_dark)) {
-echo "<tr><td class='center'>" . $row_dark['user_id'] . "</td><td>" . $row_dark['first_name'] . "</td><td>" . $row_dark['last_name'] . "</td><td>" . $row_dark['email_address'] . "</td><td>" . $row_dark['role'] . "</td><td>" . $row_dark['status'] . "</td><td>" . $row_dark['team'] . "</td><td><a href='user.php?id=" . $row_dark['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_dark['user_id'] . "'>Edit</a></td></tr>";
+echo "<tr><td class='center'>" . $row_dark['user_id'] . "</td><td>" . $row_dark['first_name'] . "</td><td>" . $row_dark['last_name'] . "</td><td>" . $row_dark['email_address'] . "</td><td>" . $row_dark['role'] . "</td><td>" . $row_light['status'] . "</td><td>" . "</td><td>" . $row_dark['team'] . "</td><td><a href='user.php?id=" . $row_dark['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_dark['user_id'] . "'>Edit</a></td></tr>";
 }
 echo "</table>"; // close table
 
