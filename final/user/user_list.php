@@ -9,7 +9,6 @@
 
 <body>
 <!--    <header>
-        <?php('../includes/navigation.html') ?>
     </header>
 -->
 <?php 
