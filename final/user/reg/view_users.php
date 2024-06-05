@@ -19,14 +19,14 @@
     </div>
 
     <h2> Neutral</h2>
-    <div class="group">
+    <div class="flex-group">
         <div class="flex-item">Item 4</div>
         <div class="flex-item">Item 5</div>
         <div class="flex-item">Item 6</div>
     </div>
 
     <h2> Dark Side</h2>
-    <div class="group">
+    <div class="flex-group">
         <div class="flex-item">Item 7</div>
         <div class="flex-item">Item 8</div>
         <div class="flex-item">Item 9</div>
