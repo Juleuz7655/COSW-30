@@ -1,5 +1,18 @@
-<?php include('includes/header.html');?>
+<?php include('includes/header.html'); ?>
 
-Hello there...
+<main>
+<?php
+// Just to make sure if session_start is active
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-<?php include('includes/footer.html');?>
+if (isset($_SESSION['first_name'])) {
+    echo "<p>Welcome, {$_SESSION['first_name']}!</p>";
+} else {
+    echo "<p>Welcome, Guest!</p>";
+}
+?>
+</main>
+
+<?php include('includes/footer.html'); ?>
