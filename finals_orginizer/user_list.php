@@ -2,18 +2,8 @@
 <html>
 <head>
 <title>List Users</title>
-<style>
-td {
-width: 100px;
-}
-thead {
-font-weight: bold;
-}
-.center {
-text-align:center;
-}
+<link rel="stylesheet" href="css/user_list.css">
 
-</style>
 </head>
 <body>
 <!--    <header>
