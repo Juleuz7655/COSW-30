@@ -10,19 +10,19 @@
 <h1>Choose a side</h1>
 
 
-<div class="container">
+<div class="flex-container">
     <h2> Light Side</h2>
-    <div class="section1">
+    <div class="flex-group">
         <p>oasdo</p>
     </div>
 
     <h2> Neutral</h2>
-    <div class="section2">
+    <div class="flex-group">
         <p>aosdjsa</p>
     </div>
 
     <h2> Dark Side</h2>
-    <div class="section3">
+    <div class="flex-group">
         <p>aosdjsa</p>
     </div>
 </div>
