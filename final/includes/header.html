@@ -27,11 +27,16 @@
                     <li><a href="list_user.php">User list</a></li>
                 <?php endif; ?>
                 <li>
-                    <a href="#">More Options ▽</a>
+                    <a href="#">Developer options ▽</a>
                     <ul class="dropdown">
-                      <li><a href="play.php">Playstation</a</li>
-                      <li><a href="xbox.php">Xbox</a></li>
-                      <li><a href="PC.php">PC</a></li>
+                        <p>Current Role: <?php echo $role; ?></p>
+                        <form method="post" action="">
+                            <input type="hidden" name="toggle_role" value="toggle">
+                            <button type="submit">
+                                <?php echo ($role === 'Admin') ? 'Change Role to User' : 'Change Role to Admin'; ?>
+                            </button>
+                        <li><a href="list_planets.php">List of Planets</a></li>
+                        <li><a href="users/user_list.php">List of Users</a></li>
                     </ul>
                 </li>
             </ul>
