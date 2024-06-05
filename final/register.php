@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_address = $_POST['email_address'];
     $role = $_POST['role'];
     $team = $_POST['team'];
-    $password = password_hash($_POST['password'], PASSWORD_BCRYPT); // Hash the password
+    $password = $_POST['password']; 
     $photo = '';
 
     // Handle file upload
@@ -82,9 +82,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="email_address">Email:</label><br>
         <input type="email" id="email_address" name="email_address" required><br><br>
         <label for="role">Role:</label><br>
-        <input type="text" id="role" name="role" required><br><br>
+        <select id="role" name="role" required>
+            <option value="User">User</option>
+            <option value="Admin">Admin</option>
+        </select><br><br>
         <label for="team">Team:</label><br>
-        <input type="text" id="team" name="team" required><br><br>
+        <select id="team" name="team" required>
+            <option value="Light">Light</option>
+            <option value="Dark">Dark</option>
+            <option value="Neutral">Neutral</option>
+        </select><br><br>
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" required><br><br>
         <label for="photo">Photo:</label><br>
