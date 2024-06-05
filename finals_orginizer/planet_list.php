@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Planets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        thead {
+            font-weight: bold;
+            background-color: #333;
+            color: white;
+        }
+
+        td, th {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .neutral-planets tbody tr {
+            background-color: #ccc;
+        }
+
+        .light-planets tbody tr {
+            background-color: #fff;
+        }
+
+        .dark-planets tbody tr {
+            background-color: #333;
+            color: white;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<?php 
+require('mysqli_connect.php'); // use require because we want to force this to exist before running our queries
+
+echo "<h1>List of Planets</h1>";
+
+function fetch_and_display_planets($connection, $status) {
+    $query = "SELECT * FROM FINAL_PLANETS WHERE planet_status = '$status'";
+    $result = mysqli_query($connection, $query);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($connection));
+    }
+
+    echo "<h2>{$status} Planets</h2>";
+    echo "<table class='{$status}-planets'><thead><tr><td class='center'>ID</td><td>Name</td><td>Status</td><td>Biome</td><td>Picture</td><td>Population</td><td>Action</td></tr></thead><tbody>"; // open table and include table headings
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr><td class='center'>" . $row['planet_id'] . "</td><td>" . $row['planet_name'] . "</td><td>" . $row['planet_status'] . "</td><td>" . $row['planet_biome'] . "</td><td><img src='" . $row['planet_picture'] . "' alt='" . $row['planet_name'] . "' style='width:50px;height:50px;'></td><td>" . $row['planet_pop'] . "</td><td><a href='planet.php?id=" . $row['planet_id'] . "'>View</a> / <a href='edit_planet.php?id=" . $row['planet_id'] . "'>Edit</a></td></tr>";
+    }
+    echo "</tbody></table>"; // close table
+}
+
+// Fetch and display planets by status
+fetch_and_display_planets($connection, 'Neutral');
+fetch_and_display_planets($connection, 'Light');
+fetch_and_display_planets($connection, 'Dark');
+?>
+</body>
+</html>
