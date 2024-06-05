@@ -8,7 +8,6 @@
 </head>
 <body>
 <h1>Choose a side</h1>
-<?php include('../includes/navigation.html');?>
 
 
 <div class="container">
