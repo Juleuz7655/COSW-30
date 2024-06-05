@@ -10,26 +10,20 @@
 <h1>Choose a side</h1>
 
 
-<div class="flex-container">
+<div class="container">
     <h2> Light Side</h2>
-    <div class="flex-group">
-        <div class="flex-item">Item 1</div>
-        <div class="flex-item">Item 2</div>
-        <div class="flex-item">Item 3</div>
+    <div class="section1">
+        <p>oasdo</p>
     </div>
 
     <h2> Neutral</h2>
-    <div class="flex-group">
-        <div class="flex-item">Item 4</div>
-        <div class="flex-item">Item 5</div>
-        <div class="flex-item">Item 6</div>
+    <div class="section2">
+        <p>aosdjsa</p>
     </div>
 
     <h2> Dark Side</h2>
-    <div class="flex-group">
-        <div class="flex-item">Item 7</div>
-        <div class="flex-item">Item 8</div>
-        <div class="flex-item">Item 9</div>
+    <div class="section3">
+        <p>aosdjsa</p>
     </div>
 </div>
 
