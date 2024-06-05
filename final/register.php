@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2>User Registration</h2>
-    <form action="register.php" method="post" enctype="multipart/form-data">
+    <form action="register.php" method="post">
         <label for="first_name">First Name:</label><br>
         <input type="text" id="first_name" name="first_name" required><br><br>
         <label for="last_name">Last Name:</label><br>
