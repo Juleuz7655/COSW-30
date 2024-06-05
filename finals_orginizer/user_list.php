@@ -2,7 +2,18 @@
 <html>
 <head>
 <title>List Users</title>
-<link rel="stylesheet" href="css/list_user.css">
+<style>
+td {
+width: 100px;
+}
+thead {
+font-weight: bold;
+}
+.center {
+text-align:center;
+}
+
+</style>
 </head>
 <body>
 <!--    <header>
@@ -14,7 +25,7 @@ require('../mysqli_connect.php'); // use require because we want to force this t
 
 echo "<h1>List of Website Users</h1>";
 //And now to perform a simple query to make sure it's working
-$query_neutral = "SELECT * FROM FINAL_USER WHERE TEAM = 'neutral'";
+$query_neutral = "SELECT * FROM FINAL_USERS WHERE TEAM = 'neutral'";
 $result_neutral = mysqli_query($connection, $query_neutral);
 
 echo "<h2>Neutral Users</h2>";
@@ -26,7 +37,7 @@ echo "<tr><td class='center'>" . $row_neutral['user_id'] . "</td><td>" . $row_ne
 echo "</table>"; // close table
 
 
-$query_light = "SELECT * FROM FINAL_USER WHERE TEAM = 'light'";
+$query_light = "SELECT * FROM FINAL_USERS WHERE TEAM = 'light'";
 $result_light = mysqli_query($connection, $query_light);
 
 echo "<h2>Light Users</h2>";
@@ -37,7 +48,7 @@ echo "<tr><td class='center'>" . $row_light['user_id'] . "</td><td>" . $row_ligh
 }
 echo "</table>"; // close table
 
-$query_dark = "SELECT * FROM FINAL_USER WHERE TEAM = 'dark'";
+$query_dark = "SELECT * FROM FINAL_USERS WHERE TEAM = 'dark'";
 $result_dark = mysqli_query($connection, $query_dark);
 
 echo "<h2>Dark Users</h2>";
