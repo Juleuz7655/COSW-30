@@ -22,7 +22,7 @@ body {
 }
 
 /* Flex item styles */
-.item {
+.flex-item {
     background-color: #f0f0f0;
     padding: 20px;
     text-align: center; /* Centers the text inside each item */
