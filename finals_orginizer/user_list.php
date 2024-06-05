@@ -32,7 +32,7 @@ echo "<h2>Neutral Users</h2>";
 echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Team</td></thead>"; // open table and include table headings
 
 while ($row_neutral = mysqli_fetch_assoc($result_neutral)) {
-echo "<tr><td class='center'>" . $row_neutral['user_id'] . "</td><td>" . $row_neutral['first_name'] . "</td><td>" . $row_neutral['last_name'] . "</td><td>" . $row_neutral['email_address'] . "</td><td>" . $row_neutral['role'] . "</td><td>" . $row_neutral['status'] . "</td><td>" . $row_neutral['team'] . "</td><td><a href='user.php?id=" . $row_neutral['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_neutral['user_id'] . "'>Edit</a></td></tr>";
+echo "<tr><td class='center'>" . $row_neutral['user_id'] . "</td><td>" . $row_neutral['first_name'] . "</td><td>" . $row_neutral['last_name'] . "</td><td>" . $row_neutral['email_address'] . "</td><td>" . $row_neutral['role'] . "</td><td>" . $row_neutral['team'] . "</td><td><a href='user.php?id=" . $row_neutral['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_neutral['user_id'] . "'>Edit</a></td></tr>";
 }
 echo "</table>"; // close table
 
