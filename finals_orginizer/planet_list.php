@@ -10,7 +10,7 @@
             padding: 20px;
         }
 
-        h1, h2 {
+        h1 {
             text-align: center;
             color: #333;
         }
@@ -70,27 +70,20 @@ require('mysqli_connect.php'); // use require because we want to force this to e
 
 echo "<h1>List of Planets</h1>";
 
-function fetch_and_display_planets($connection, $status) {
-    $query = "SELECT * FROM FINAL_PLANETS WHERE planet_status = '$status'";
-    $result = mysqli_query($connection, $query);
+$query = "SELECT * FROM FINAL_PLANETS";
+$result = mysqli_query($connection, $query);
 
-    if (!$result) {
-        die("Query failed: " . mysqli_error($connection));
-    }
-
-    echo "<h2>{$status} Planets</h2>";
-    echo "<table class='{$status}-planets'><thead><tr><td class='center'>ID</td><td>Name</td><td>Status</td><td>Biome</td><td>Picture</td><td>Population</td><td>Action</td></tr></thead><tbody>"; // open table and include table headings
-
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "<tr><td class='center'>" . $row['planet_id'] . "</td><td>" . $row['planet_name'] . "</td><td>" . $row['planet_status'] . "</td><td>" . $row['planet_biome'] . "</td><td><img src='" . $row['planet_picture'] . "' alt='" . $row['planet_name'] . "' style='width:50px;height:50px;'></td><td>" . $row['planet_pop'] . "</td><td><a href='planet.php?id=" . $row['planet_id'] . "'>View</a> / <a href='edit_planet.php?id=" . $row['planet_id'] . "'>Edit</a></td></tr>";
-    }
-    echo "</tbody></table>"; // close table
+if (!$result) {
+    die("Query failed: " . mysqli_error($connection));
 }
 
-// Fetch and display planets by status
-fetch_and_display_planets($connection, 'Neutral');
-fetch_and_display_planets($connection, 'Light');
-fetch_and_display_planets($connection, 'Dark');
+echo "<table><thead><tr><td class='center'>ID</td><td>Name</td><td>Status</td><td>Biome</td><td>Picture</td><td>Population</td><td>Action</td></tr></thead><tbody>"; // open table and include table headings
+
+while ($row = mysqli_fetch_assoc($result)) {
+    echo "<tr class='" . strtolower($row['planet_status']) . "-planets'><td class='center'>" . $row['planet_id'] . "</td><td>" . $row['planet_name'] . "</td><td>" . $row['planet_status'] . "</td><td>" . $row['planet_biome'] . "</td><td><img src='" . $row['planet_picture'] . "' alt='" . $row['planet_name'] . "' style='width:50px;height:50px;'></td><td>" . $row['planet_pop'] . "</td><td><a href='planet.php?id=" . $row['planet_id'] . "'>View</a> / <a href='edit_planet.php?id=" . $row['planet_id'] . "'>Edit</a></td></tr>";
+}
+echo "</tbody></table>"; // close table
+
 ?>
 </body>
 </html>
