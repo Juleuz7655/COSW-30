@@ -1,4 +1,4 @@
-<?php require("mysqli_connect.php"); ?>
+<?php require("../mysqli_connect.php"); ?>
 
 <?php 
 // If this form has been submitted do the update process
