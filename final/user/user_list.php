@@ -33,10 +33,10 @@ $query_light = "SELECT * FROM FINAL_USERS WHERE TEAM = 'Light'";
 $result_light = mysqli_query($connection, $query_light);
 
 echo "<h2>Light Users</h2>";
-echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Team</td><td>Action</td></thead>"; // open table and include table headings
+echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Team</td><td>Photo</td><td>Action</td></thead>"; // open table and include table headings
 
 while ($row_light = mysqli_fetch_assoc($result_light)) {
-echo "<tr><td class='center'>" . $row_light['user_id'] . "</td><td>" . $row_light['first_name'] . "</td><td>" . $row_light['last_name'] . "</td><td>" . $row_light['email_address'] . "</td><td>" . $row_light['role'] . "</td><td>" . $row_light['team'] . "</td><td><a href='user.php?id=" . $row_light['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_light['user_id'] . "'>Edit</a></td></tr>";
+echo "<tr><td class='center'>" . $row_light['user_id'] . "</td><td>" . $row_light['first_name'] . "</td><td>" . $row_light['last_name'] . "</td><td>" . $row_light['email_address'] . "</td><td>" . $row_light['role'] . "</td><td>" . $row_light['team'] . "</td><td><img src='" . $row['photo'] . "' alt='User Photo' width='50'></td><td><a href='user.php?id=" . $row_light['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_light['user_id'] . "'>Edit</a></td></tr>";
 }
 echo "</table>"; // close table
 
@@ -44,10 +44,10 @@ $query_dark = "SELECT * FROM FINAL_USERS WHERE TEAM = 'Dark'";
 $result_dark = mysqli_query($connection, $query_dark);
 
 echo "<h2>Dark Users</h2>";
-echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Team</td><td>Action</td></thead>"; // open table and include table headings
+echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Team</td><td>Photo</td><td>Action</td></thead>"; // open table and include table headings
 
 while ($row_dark = mysqli_fetch_assoc($result_dark)) {
-echo "<tr><td class='center'>" . $row_dark['user_id'] . "</td><td>" . $row_dark['first_name'] . "</td><td>" . $row_dark['last_name'] . "</td><td>" . $row_dark['email_address'] . "</td><td>" . $row_dark['role'] . "</td><td>" . $row_dark['team'] . "</td><td><a href='user.php?id=" . $row_dark['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_dark['user_id'] . "'>Edit</a></td></tr>";
+echo "<tr><td class='center'>" . $row_dark['user_id'] . "</td><td>" . $row_dark['first_name'] . "</td><td>" . $row_dark['last_name'] . "</td><td>" . $row_dark['email_address'] . "</td><td>" . $row_dark['role'] . "</td><td>" . $row_dark['team'] . "</td><td><img src='" . $row['photo'] . "' alt='User Photo' width='50'></td><td><a href='user.php?id=" . $row_dark['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_dark['user_id'] . "'>Edit</a></td></tr>";
 }
 echo "</table>"; // close table
 
