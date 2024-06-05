@@ -1,0 +1,30 @@
+/* Ensure the body has no default margins/padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Outer flex container */
+.outer-flex-container {
+    display: flex;
+    justify-content: space-between; /* Evenly distribute groups */
+    padding: 10px;
+    gap: 10px; /* Optional: Adds space between the groups */
+}
+
+/* Flex group styles */
+.flex-group {
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    flex: 1; /* Allows groups to take equal space */
+    gap: 10px; /* Optional: Adds space between the items in a group */
+}
+
+/* Flex item styles */
+.flex-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center; /* Centers the text inside each item */
+    border: 1px solid #ccc; /* Optional: Adds a border to each item */
+}

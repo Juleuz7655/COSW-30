@@ -1,12 +1,3 @@
-<?php
-
-$isAdmin = isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'Admin';
-
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +12,8 @@ $isAdmin = isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'Admin';
 		<ul>
 			<li><a href="index.php">Home</a></li>
 			<li><a href="register.php">Register</a></li>
-			<li><a href="view_users.php">View Users</a></li>
+			<li><a href="user/reg/view_users.php">View Users</a></li>
+			<li><a href="planet/reg/view_planets.php">View Planets</a></li>
 			<li><a href="password.php">Change Password</a></li>
 			<li><?php // Create a login/logout link:
 			if (isset($_SESSION['user_id'])) {
@@ -31,10 +23,12 @@ $isAdmin = isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'Admin';
 			}
 			?>
 			</li>
+			<!-- Need help-->
 			<?php if ($isAdmin): ?>
             <li><a href="planet/planet_list.php">Manage Planets</a></li>
             <li><a href="user/user_list.php">Manage Users</a></li>
         	<?php endif; ?>
+			<!-- Not yet done-->
 		</ul>
 </nav>
 <!-- Script 12.10 - header.html -->
