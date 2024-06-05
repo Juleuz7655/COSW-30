@@ -22,6 +22,10 @@
 			}
 			?>
 			</li>
+			<?php if ($isAdmin): ?>
+            <li><a href="planet/planet_list.php">Manage Planets</a></li>
+            <li><a href="user/user_list.php">Manage Users</a></li>
+        	<?php endif; ?>
 		</ul>
 </nav>
 <!-- Script 12.10 - header.html -->
