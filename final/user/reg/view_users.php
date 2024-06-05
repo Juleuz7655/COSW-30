@@ -10,9 +10,9 @@
 <h1>Choose a side</h1>
 
 
-<div class="container">
+<div class="flex-container">
     <h2> Light Side</h2>
-    <div class="group">
+    <div class="flex-group">
         <div class="flex-item">Item 1</div>
         <div class="flex-item">Item 2</div>
         <div class="flex-item">Item 3</div>

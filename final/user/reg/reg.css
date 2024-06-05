@@ -6,7 +6,7 @@ body {
 }
 
 /* Outer flex container */
-.container {
+.flex-container {
     display: flex;
     justify-content: space-between; /* Evenly distribute groups */
     padding: 10px;
@@ -14,7 +14,7 @@ body {
 }
 
 /* Flex group styles */
-.group {
+.flex-group {
     display: flex;
     flex-direction: column; /* Arrange items in a column */
     flex: 1; /* Allows groups to take equal space */
