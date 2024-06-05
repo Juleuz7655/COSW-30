@@ -10,7 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
 if (isset($_SESSION['first_name'])) {
     echo "<p>Welcome, {$_SESSION['first_name']}!</p>";
 } else {
-    echo "<p>Welcome, Guest!</p>";
+    echo "<p>Welcome, Guest! Please <a href='login.php'>log in</a> or <a href='register.php'>register</a> so the Galactic Empire can ensure your safety.</p>";
 }
 ?>
 </main>
