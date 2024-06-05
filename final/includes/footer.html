@@ -2,6 +2,12 @@
 	<div class="container">
 		<p class="text-muted"><p>Copyright &copy; 2024</p>
 	</div>
+	<form method="post" action="">
+		<input type="hidden" name="toggle_role" value="toggle">
+		<button type="submit">
+			<?= ($role === 'Admin') ? 'Change Role to User' : 'Change Role to Admin';?>
+		</button>
+	</form>
 </footer>
 </body>
 </html>
