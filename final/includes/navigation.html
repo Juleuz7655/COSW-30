@@ -1,4 +1,10 @@
 <!-- Just copy paste the nav in header after finishing the header nav-->
+<?php 
+session_start();
+
+$isAdmin= isset($_SESSION['role']) && $_SESSION['role'] === 'Admin';
+
+?> 
 
 
 <nav>
