@@ -99,9 +99,9 @@ nav ul li a:hover {
 			<li><a href="../planet/planet_list.php">View Planets</a></li>
 			<li><?php // Create a login/logout link:
 			if (isset($_SESSION['user_id'])) {
-				echo '<a href=".//logout.php">Logout</a>';
+				echo '<a href="../logout.php">Logout</a>';
 			} else {
-				echo '<a href=".//login.php">Login</a>';
+				echo '<a href="../login.php">Login</a>';
 			}
 			?>
 			</li>
