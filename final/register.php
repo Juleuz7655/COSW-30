@@ -1,13 +1,19 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
+<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'mysqli_connect.php'; // Make sure this file correctly sets up the $conn variable
+    include 'mysqli_connect.php';
 
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email_address = $_POST['email_address'];
     $role = $_POST['role'];
     $team = $_POST['team'];
-    $password = $_POST['password']; // Storing password as plain text (not recommended for production)
+    $password = $_POST['password'];
     $photo = '';
 
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
@@ -21,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Check file size (limit to 5MB)
             if ($_FILES["photo"]["size"] <= 5000000) {
                 // Allow certain file formats
-                if (in_array($imageFileType, ['jpg', 'png', 'jpeg'])) {
+                if ($imageFileType == "jpg" || $imageFileType == "png" || $imageFileType == "jpeg") {
                     if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
                         $photo = $target_file;
                     } else {
@@ -40,23 +46,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare and bind
     $stmt = $conn->prepare("INSERT INTO FINAL_USERS (first_name, last_name, email_address, role, team, password, photo) VALUES (?, ?, ?, ?, ?, ?, ?)");
-    if ($stmt) {
-        $stmt->bind_param("sssssss", $first_name, $last_name, $email_address, $role, $team, $password, $photo);
+    $stmt->bind_param("sssssss", $first_name, $last_name, $email_address, $role, $team, $password, $photo);
 
-        // Execute the statement
-        if ($stmt->execute()) {
-            echo "New user registered successfully!";
-        } else {
-            echo "Error: " . $stmt->error;
-        }
-
-        // Close the statement
-        $stmt->close();
+    // Execute the statement
+    if ($stmt->execute()) {
+        echo "New user registered successfully!";
     } else {
-        echo "Error preparing statement: " . $conn->error;
+        echo "Error: " . $stmt->error;
     }
 
-    // Close the connection
+    // Close the statement and connection
+    $stmt->close();
     $conn->close();
 }
 ?>
