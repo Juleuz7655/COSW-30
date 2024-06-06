@@ -57,8 +57,6 @@ nav ul li a:hover {
 
 /* Main content styles */
 main {
-    margin: 20px auto;
-    padding: 20px;
     max-width: 800px;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background to ensure readability over background image */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
