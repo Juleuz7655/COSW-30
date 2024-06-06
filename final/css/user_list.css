@@ -41,7 +41,7 @@ tbody tr:nth-child(even) {
 }
 
 .dark-users tbody tr {
-    background-color: #DC143C;
+    background-color: #ec002f;
     color: black;
 }
 
