@@ -20,7 +20,7 @@ echo "<h1>List of Website Users</h1>";
 $query_neutral = "SELECT * FROM FINAL_USERS WHERE TEAM = 'Neutral'";
 $result_neutral = mysqli_query($connection, $query_neutral);
 
-echo '<div class="neutral">';
+echo '<div class="netural-users">';
 echo "<h2>Neutral Users</h2>";
 echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Team</td><td>Photo</td><td>Action</td></thead>"; // open table and include table headings
 echo '</div>';
@@ -35,7 +35,7 @@ echo "</table>"; // close table
 $query_light = "SELECT * FROM FINAL_USERS WHERE TEAM = 'Light'";
 $result_light = mysqli_query($connection, $query_light);
 
-echo '<div class="light">';
+echo '<div class="light-users">';
 echo "<h2>Light Users</h2>";
 echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Team</td><td>Photo</td><td>Action</td></thead>"; // open table and include table headings
 echo '</div>';
@@ -48,7 +48,7 @@ echo "</table>"; // close table
 $query_dark = "SELECT * FROM FINAL_USERS WHERE TEAM = 'Dark'";
 $result_dark = mysqli_query($connection, $query_dark);
 
-echo '<div class="dark">';
+echo '<div class="dark-users">';
 echo "<h2>Dark Users</h2>";
 echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Team</td><td>Photo</td><td>Action</td></thead>"; // open table and include table headings
 echo '</div>';
