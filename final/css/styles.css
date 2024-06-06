@@ -10,24 +10,34 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container to hold header, main, and footer */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 /* Header styles */
-h1 {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* Navigation styles */
-nav {
-    background-color: #333;
+header {
+    background: #333;
     color: #fff;
     padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
     text-align: center;
+    padding: 0;
 }
 
 nav ul li {
@@ -48,6 +58,7 @@ nav ul li a:hover {
 
 /* Main content styles */
 main {
+    flex-grow: 1;
     margin: 20px auto;
     padding: 20px;
     max-width: 800px;
@@ -62,7 +73,4 @@ footer {
     padding: 10px;
     background-color: #333;
     color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
