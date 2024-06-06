@@ -93,10 +93,10 @@ nav ul li a:hover {
 <body>
 <nav>
 		<ul>
-			<li><a href=".//index.php">Home</a></li>
-			<li><a href=".//register.php">Register</a></li>
-			<li><a href=".//user/user_list.php">View Users</a></li>
-			<li><a href=".//planet/planet_list.php">View Planets</a></li>
+			<li><a href="../index.php">Home</a></li>
+			<li><a href="../register.php">Register</a></li>
+			<li><a href="../user/user_list.php">View Users</a></li>
+			<li><a href="../planet/planet_list.php">View Planets</a></li>
 			<li><?php // Create a login/logout link:
 			if (isset($_SESSION['user_id'])) {
 				echo '<a href=".//logout.php">Logout</a>';
