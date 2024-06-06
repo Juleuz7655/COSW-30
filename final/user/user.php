@@ -1,3 +1,22 @@
+<?php
+
+$pagetitle = "User Information";
+
+require('../mysqli_connect.php'); // use require because we want to force this to exist before running our queries
+
+if ($_SERVER["REQUEST_METHOD"] == "GET")
+{
+    $user_id = $_GET['id'];
+    $query = "SELECT * FROM FINAL_USERS WHERE user_id = $user_id";
+    $result = mysqli_query($connection, $query);
+    $row = mysqli_fetch_array($result);
+    echo "user ID: " . $user_id . " ";
+    echo $query;
+} else {
+    echo "wasn't me";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
