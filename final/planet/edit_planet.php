@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>List Users</title>
+<link rel="stylesheet" href="../css/register.css">
+</head>
+<body></body>
+
 <?php require("../mysqli_connect.php"); ?>
 
 <?php 
