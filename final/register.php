@@ -76,6 +76,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>User Registration</title>
     <link rel="stylesheet" type="text/css" href="css/register.css">
 </head>
+<?php include('includes/header.html'); ?>
+
 <body>
     <h2>User Registration</h2>
     <form action="register.php" method="post" enctype="multipart/form-data">
@@ -104,3 +106,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </body>
 </html>
+<?php include('includes/footer.html'); ?>
