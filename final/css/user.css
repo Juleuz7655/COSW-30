@@ -1,0 +1,108 @@
+/* General reset */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a default font and background */
+body {
+    background-image: url('../img/space.jpg'); /* Adjust path if necessary */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Main content styles */
+main {
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background to ensure readability over background image */
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* Title styles */
+h1 {
+    margin-bottom: 20px;
+    color: #FFD700; /* Yellow color for the title */
+}
+
+/* User info container */
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* User photo styles */
+.user-photo {
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    flex-shrink: 0;
+}
+
+/* User details styles */
+.user-details {
+    text-align: left;
+    max-width: 300px;
+}
+
+.user-details p {
+    margin: 10px 0;
+}
+
+.user-details a {
+    color: #FFD700; /* Link color */
+    text-decoration: none;
+}
+
+.user-details a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
