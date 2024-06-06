@@ -8,6 +8,7 @@ body, h1, p, ul, li {
 body {
     background-image: url('../img/space.jpg'); /* Adjust path if necessary */
     background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     color: yellow;
     line-height: 1.6;
@@ -17,6 +18,7 @@ body {
 h1 {
     text-align: center;
     margin-top: 20px;
+    color: #ffeb3b; /* Brighter yellow for header */
 }
 
 /* Paragraph styles */
@@ -26,7 +28,7 @@ p {
 
 /* Navigation styles */
 nav {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background for nav */
     color: #fff;
     padding: 10px 0;
 }
@@ -45,6 +47,7 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 5px 10px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 nav ul li a:hover {
@@ -95,6 +98,9 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px; /* Add margin to ensure it is visible */
+    align-self: flex-start; /* Align to the start of the form */
+    font-size: 18px;
 }
 
 input[type="submit"]:hover {
@@ -105,9 +111,32 @@ input[type="submit"]:hover {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background for footer */
     color: #fff;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+    }
 }
