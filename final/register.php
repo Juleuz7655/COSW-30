@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_address = $_POST['email_address'];
     $role = $_POST['role'];
     $team = $_POST['team'];
-    $password = $_POST['password']; 
+    $password = $_POST['password'];
     $photo = '';
 
     if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
@@ -54,15 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
-
-
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html>
