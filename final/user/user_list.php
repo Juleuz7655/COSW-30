@@ -20,8 +20,11 @@ echo "<h1>List of Website Users</h1>";
 $query_neutral = "SELECT * FROM FINAL_USERS WHERE TEAM = 'Neutral'";
 $result_neutral = mysqli_query($connection, $query_neutral);
 
+echo '<div class="neutral"></div>';
 echo "<h2>Neutral Users</h2>";
 echo "<table><thead><td class='center'>ID</td><td>First Name</td><td>Last Name</td><td>Email Address</td><td>Role</td><td>Team</td><td>Photo</td><td>Action</td></thead>"; // open table and include table headings
+echo '</div>';
+
 
 while ($row_neutral = mysqli_fetch_assoc($result_neutral)) {
 echo "<tr><td class='center'>" . $row_neutral['user_id'] . "</td><td>" . $row_neutral['first_name'] . "</td><td>" . $row_neutral['last_name'] . "</td><td>" . $row_neutral['email_address'] . "</td><td>" . $row_neutral['role'] . "</td><td>" . $row_neutral['team'] . "</td><td><img src='" . $row_neutral['photo'] . "' alt='User Photo' width='50'></td><td><a href='user.php?id=" . $row_neutral['user_id'] . "'>View</a> / <a href='edit_user.php?id=" . $row_neutral['user_id'] . "'>Edit</a></td></tr>";
