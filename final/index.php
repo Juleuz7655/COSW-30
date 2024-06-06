@@ -3,7 +3,6 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-$isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'Admin';
 include('includes/header.html'); 
 ?>
 
