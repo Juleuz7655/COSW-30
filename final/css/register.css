@@ -11,11 +11,10 @@ body {
     color: #333;
     line-height: 1.6;
     background-color: #f4f4f4;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; /* Full height of the viewport */
 }
 
 h2 {
@@ -60,6 +59,7 @@ input[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%; /* Make the button full width */
 }
 
 input[type="submit"]:hover {
