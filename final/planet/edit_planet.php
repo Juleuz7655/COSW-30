@@ -47,9 +47,8 @@ else {
     $planet_id = $_GET['id'];
     $query = "SELECT * FROM FINAL_PLANETS WHERE planet_id = $planet_id";
 
-    // USER TESTING
-    echo $planet_id;
-    echo $query;
+
+
 }
 
 $result = mysqli_query($connection, $query);
