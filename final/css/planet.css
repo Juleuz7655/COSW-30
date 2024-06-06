@@ -1,0 +1,75 @@
+/* Reset some basic styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a default font and background */
+body {
+    background-image: url('../img/space.jpg'); /* Adjust path if necessary */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: yellow;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Main content styles */
+main {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background to ensure readability over background image */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: calc(100% - 22px); /* Adjust width to account for padding and border */
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #575757;
+}
+
+/* Success message styles */
+h4 {
+    color: green;
+    text-align: center;
+    margin-top: 20px;
+}
