@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>List Users</title>
-<link rel="stylesheet" href="../css/planet.css">
 </head>
 <body></body>
 
