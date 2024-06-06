@@ -1,11 +1,16 @@
-<?php include('includes/header.html'); ?>
-
-<main>
 <?php
 // Just to make sure if session_start is active
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+
+include('includes/header.html'); 
+?>
+
+
+<main>
+<?php
+
 
 if (isset($_SESSION['first_name'])) {
     echo "<p>Welcome, {$_SESSION['first_name']}!</p>";
