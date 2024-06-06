@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO FINAL_USERS (first_name, last_name, email_address, role, team, password, photo) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $connection->prepare("INSERT INTO FINAL_USERS (first_name, last_name, email_address, role, team, password, photo) VALUES (?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssssss", $first_name, $last_name, $email_address, $role, $team, $password, $photo);
 
     // Execute the statement
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Close the statement and connection
     $stmt->close();
-    $conn->close();
+    $connection->close();
 }
 ?>
 
