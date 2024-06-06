@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Star Wars Space Transit Center</title>
-<link href="css/register.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
 <h1>Star Wars Transit Center</h1>
