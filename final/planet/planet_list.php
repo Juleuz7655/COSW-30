@@ -1,30 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Star Wars Space Transit Center</title>
-<link href="../css/planet_list.css" rel="stylesheet">
+    <title>List Planets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        thead {
+            font-weight: bold;
+            background-color: #333;
+            color: white;
+        }
+
+        td, th {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .neutral-planets tbody tr {
+            background-color: #ccc;
+        }
+
+        .light-planets tbody tr {
+            background-color: #fff;
+        }
+
+        .dark-planets tbody tr {
+            background-color: #333;
+            color: white;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
-<h1>Star Wars Transit Center</h1>
-<nav>
-		<ul>
-			<li><a href="../index.php">Home</a></li>
-			<li><a href="../register.php">Register</a></li>
-			<li><a href="../user/user_list.php">View Users</a></li>
-			<li><a href="planet_list.php">View Planets</a></li>
-			<li><?php // Create a login/logout link:
-			if (isset($_SESSION['user_id'])) {
-				echo '<a href="../logout.php">Logout</a>';
-			} else {
-				echo '<a href="../login.php">Login</a>';
-			}
-			?>
-			</li>
-		</ul>
-</nav>
-<!-- Script 12.10 - header.html -->
 <body>
 <?php 
 require('../mysqli_connect.php'); // use require because we want to force this to exist before running our queries
