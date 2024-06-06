@@ -4,21 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Star Wars Space Transit Center</title>
-<link href="css/planet_list.css" rel="stylesheet">
+<link href="../css/planet_list.css" rel="stylesheet">
 </head>
 <body>
 <h1>Star Wars Transit Center</h1>
 <nav>
 		<ul>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="register.php">Register</a></li>
-			<li><a href="user/user_list.php">View Users</a></li>
-			<li><a href="planet/planet_list.php">View Planets</a></li>
+			<li><a href="../index.php">Home</a></li>
+			<li><a href="../register.php">Register</a></li>
+			<li><a href="../user/user_list.php">View Users</a></li>
+			<li><a href="planet_list.php">View Planets</a></li>
 			<li><?php // Create a login/logout link:
 			if (isset($_SESSION['user_id'])) {
-				echo '<a href="logout.php">Logout</a>';
+				echo '<a href="../logout.php">Logout</a>';
 			} else {
-				echo '<a href="login.php">Login</a>';
+				echo '<a href="../login.php">Login</a>';
 			}
 			?>
 			</li>
