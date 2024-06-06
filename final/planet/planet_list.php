@@ -80,7 +80,7 @@ if (!$result) {
 echo "<table><thead><tr><td class='center'>ID</td><td>Name</td><td>Status</td><td>Biome</td><td>Population</td><td>Action</td></tr></thead><tbody>"; // open table and include table headings
 
 while ($row = mysqli_fetch_assoc($result)) {
-    echo "<tr class='" . strtolower($row['planet_status']) . "-planets'><td class='center'>" . $row['planet_id'] . "</td><td>" . $row['planet_name'] . "</td><td>" . $row['planet_status'] . "</td><td>" . $row['planet_biome'] . "</td><td><img src='" . $row['planet_pop'] . "</td><td><a href='planet.php?id=" . $row['planet_id'] . "'>View</a> / <a href='edit_planet.php?id=" . $row['planet_id'] . "'>Edit</a></td></tr>";
+    echo "<tr class='" . strtolower($row['planet_status']) . "-planets'><td class='center'>" . $row['planet_id'] . "</td><td>" . $row['planet_name'] . "</td><td>" . $row['planet_status'] . "</td><td>" . $row['planet_biome'] . "</td><td>'" . $row['planet_pop'] . "</td><td><a href='planet.php?id=" . $row['planet_id'] . "'>View</a> / <a href='edit_planet.php?id=" . $row['planet_id'] . "'>Edit</a></td></tr>";
 }
 echo "</tbody></table>"; // close table
 
