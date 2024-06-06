@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-image: url('../img/space.jpg'); /* Adjust path if necessary */
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,6 +10,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: yellow;
+
 }
 
 h1 {
