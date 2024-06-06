@@ -71,12 +71,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>User Registration</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Star Wars Space Transit Center</title>
+<link href="css/styles.css" rel="stylesheet">
 </head>
-<?php include('includes/header.html'); ?>
+<body>
+<h1>Star Wars Transit Center</h1>
+<nav>
+		<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="register.php">Register</a></li>
+			<li><a href="user/user_list.php">View Users</a></li>
+			<li><a href="planet/planet_list.php">View Planets</a></li>
+			<li><?php // Create a login/logout link:
+			if (isset($_SESSION['user_id'])) {
+				echo '<a href="logout.php">Logout</a>';
+			} else {
+				echo '<a href="login.php">Login</a>';
+			}
+			?>
+			</li>
+		</ul>
+</nav>
 
 <body>
     <h2>User Registration</h2>
