@@ -1,10 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Connect to MySQL</title>
-</head>
-<body>
 <?php
 
 //Connect to the database - use these values if you are using my webserver, just change your db name to your own
@@ -22,13 +15,10 @@ mysqli_connect_error() .
 " (" .mysqli_connect_errno() . ")"
 );
 }
-else {
-echo "connection made";
-}
+//else {
+//echo "connection made";
+//}
 
 // If no errors, you can proceed with your sql queries
 
 ?>
-
-</body>
-</html>
